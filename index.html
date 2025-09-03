@@ -1,27 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Siam Selections</title>
-</head>
-<body>
-    <head>
-        <h1>Welcome to Siam Selections Page</h1>
-        <p>To check your selection status, in your roll number</p>
-    </head>
+    <style>
+    body, html {
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    h1 {
+      position: relative;
+      color: white;
+      text-align: center;
+      top: 40%;
+      font-size: 3rem;
+    }
+  </style>
+  </head>
+  <body>
+  <video autoplay muted loop>
+    <source src="src/bluePh.mp4" type="video/mp4">
+  </video>
     <div>
-        <form action="result.html" method="get">
-            <label for="rollno">Enter your Roll Number:</label>
-            <input type="text" id="rollno" name="rollno" required>
-            <button type="submit">Check Status</button>
-        </form>
+      <h1>Welcome to Siam Selections Page</h1>
+      <p>To check your selection status, in your roll number</p>
     </div>
-    <footer>
-        <p>&copy; 2025 Siam Selections. All rights reserved.</p>
-        <p>
-            Made with love by Jeetansh and Harshit..
-        </p>
-    </footer>
-</body>
+    <div>
+      <form action="result.html" method="get">
+        <label for="rollno">Enter your Roll Number:</label>
+        <input type="text" id="rollno" name="rollno" required />
+        <button type="submit">Check Status</button>
+      </form>
+    </div>
+  </body>
+  <footer>
+    <p>&copy; 2025 Siam Selections. All rights reserved.</p>
+    <p>Made with love by Jeetansh and Harshit..</p>
+  </footer>
 </html>
