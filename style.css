@@ -27,7 +27,7 @@ body {
   justify-content: center;
   padding: 30px 0;
   gap: 1px;
-  color: #00ACA0;
+  color: #00aca0;
 }
 
 .logo {
@@ -47,8 +47,19 @@ body {
   height: calc(100vh - 300px);
 }
 
+.rays {
+  position: fixed;
+  top: 0;
+  left: 9%;
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.6;
+}
+
 .login {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.23);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
@@ -82,12 +93,12 @@ body {
   font-size: 1rem;
   outline: none;
   background: white;
-} 
+}
 
 #btn {
   width: 100%;
   padding: 15px;
-  background-color: #00ACA0;
+  background-color: #00aca0;
   color: white;
   border: none;
   border-radius: 25px;
@@ -98,5 +109,36 @@ body {
 
 #btn:hover {
   background-color: white;
-  color: #00ACA0;
+  color: #00aca0;
+}
+
+.astro {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  height: auto;
+  animation: animate-astro 13s linear infinite;
+}
+
+@keyframes animate-astro {
+  0% {
+    transform: translateX(calc(100% + 100vw));
+  }
+  50% {
+    transform: translateX(calc(-100% - 100vw));
+  }
+  50.01% {
+    transform: translateX(calc(-100% - 100vw)) rotateY(210deg);
+  }
+  100% {
+    transform: translateX(calc(100% + 100vw)) rotateY(210deg);
+  }
+}
+.github {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: auto;
 }
