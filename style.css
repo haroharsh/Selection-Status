@@ -152,16 +152,16 @@ body {
 }
 
 .message.success {
-  background-color: #00aca0;
-  color: white;
+  background-color: #1ca350;
+  color: #2C2C2B;
 }
 
 .message.error {
-  background-color: rgba(13, 214, 240, 0.2);
-  color: #ef4444;
+  background-color: #8291a1;
+  color: #2C2C2B;
 }
 
 .message.info {
-  background-color: #00aca0;
-  color: white;
+  background-color: #eb212e;
+  color: #2C2C2B;
 }
