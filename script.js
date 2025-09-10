@@ -26,7 +26,7 @@ checkButton.addEventListener("click", async function () {
   }
 
   if (!enrollmentNo.startsWith('24') && !enrollmentNo.startsWith('25')) {
-    showMessage("Incorrenct enrolment. Please try again!", "error");
+    showMessage("Incorrenct enrollment. Please try again!", "error");
     return;
   }
 
