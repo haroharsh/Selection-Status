@@ -7,14 +7,20 @@
     <link rel="stylesheet" href="canvastyle.css" />
     <script src="canva.js" defer></script>
   </head>
-  <body>
-    <div>
-      <h1 class="canHead">Draw a phoenix to see your result</h1>
-      <canvas id="drawCanvas" width="600" height="400"></canvas>
-      <br />
-      <button id="checkBtn">Check Drawing</button>
-      <button id="clearBtn">Clear</button>
-      <div id="result"></div>
+  <div class="container">
+    <h2 class="canHead">Draw the Phoenix!</h2>
+
+    <div id="canvasContainer">
+      <img id="overlay" src="src/phoenix.png" alt="Phoenix Overlay"/>
+      <canvas id="drawCanvas" width="500" height="500"></canvas>
     </div>
-  </body>
+
+    <div>
+      <button id="clearBtn">Clear</button>
+      <button id="checkBtn">Check Drawing</button>
+      <button id="toggleOverlayBtn">Hide Overlay</button>
+    </div>
+
+    <div id="result"></div>
+  </div>
 </html>

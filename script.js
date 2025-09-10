@@ -43,7 +43,10 @@ checkButton.addEventListener("click", function () {
     .includes(true);
 
   if (isSelected) {
-    showMessage("Congratulations! You have been selected.", "success");
+    // showMessage("Congratulations! You have been selected.", "success");
+    setTimeout(() => {
+      window.location.href = "canva.html";
+    }, 2000);
   } else {
     showMessage("Sorry, you were not selected this time.", "info");
   }
