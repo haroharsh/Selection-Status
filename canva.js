@@ -115,7 +115,7 @@ const canvas = document.getElementById("drawCanvas");
         const similarity = (matchCount / totalCount) * 100;
         const result = document.getElementById("result");
 
-        if (similarity > 20) {
+        if (similarity > 50) {
           result.innerHTML = `<p style="color:green">✅ Looks like a Phoenix!</p>`;
           setTimeout(() => {
             alert('Congrats! You are selected')
