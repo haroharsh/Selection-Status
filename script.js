@@ -6,21 +6,15 @@ function showMessage(message, type) {
   if (!messageDiv) {
     messageDiv = document.createElement("div");
     messageDiv.id = "message";
-    const loginElement = document.querySelector(".login");
-    if (loginElement) {
-      loginElement.appendChild(messageDiv);
-    } else {
-      document.body.appendChild(messageDiv);
-    }
+    document.querySelector(".login").appendChild(messageDiv);
   }
   messageDiv.textContent = message;
   messageDiv.className = `message ${type}`;
-  messageDiv.style.display = "block";
 }
 
-checkButton.addEventListener("click", function () {
+checkButton.addEventListener("click", async function () {
   const enrollmentNo = enrollmentInput.value.trim();
-
+  
   if (!enrollmentNo) {
     showMessage("Please enter your enrollment number", "error");
     return;
@@ -31,23 +25,20 @@ checkButton.addEventListener("click", function () {
     return;
   }
 
-  const selectedStudents = [
-    "123456789",
-    "987654321",
-    "111111111",
-    "222222222",
-    "241030093",
-  ];
-  const isSelected = selectedStudents
-    .map((student) => student === enrollmentNo)
-    .includes(true);
+  if (!enrollmentNo.startsWith('24') && !enrollmentNo.startsWith('25')) {
+    showMessage("Incorrenct enrolment. Please try again!", "error");
+    return;
+  }
 
-  if (isSelected) {
-    // showMessage("Congratulations! You have been selected.", "success");
-    setTimeout(() => {
-      window.location.href = "canva.html";
-    }, 2000);
-  } else {
-    showMessage("Sorry, you were not selected this time.", "info");
+  try {
+    const response = await fetch('students.json');
+    const data = await response.json();
+    const isSelected = data.selectedStudents.includes(enrollmentNo);
+    
+    localStorage.setItem('enrollmentNo', enrollmentNo);
+    localStorage.setItem('isSelected', isSelected);
+    window.location.href = "canva.html";
+  } catch (error) {
+    showMessage("Error checking selection status", "error");
   }
 });

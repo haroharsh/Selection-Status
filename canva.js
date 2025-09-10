@@ -118,8 +118,8 @@ const canvas = document.getElementById("drawCanvas");
         if (similarity > 50) {
           result.innerHTML = `<p style="color:green">✅ Looks like a Phoenix!</p>`;
           setTimeout(() => {
-            alert('Congrats! You are selected')
-          }, 1000);
+            window.location.href = "result.html";
+          }, 1500);
         } else {
           result.innerHTML = `<p style="color:red">❌ Not close enough. Try again!</p>`;
         }
