@@ -253,7 +253,7 @@ export default function App() {
                   type="text" 
                   placeholder="Enter Captcha Code" 
                   value={captchaInput} 
-                  onChange={(e) => setCaptchaInput(e.target.value)}
+                  onChange={(e) => setCaptchaInput(e.target.value.toUpperCase())}
                   autoComplete="off"
                 />
               </div>
