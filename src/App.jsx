@@ -179,7 +179,7 @@ export default function App() {
 
       <div className="logo-container">
         <a href="https://siamjuit.vercel.app" target="_blank" rel="noopener noreferrer">
-          <img src="/siamlogo.webp" className="logo-img" alt="SIAM Logo" />
+          <img src="/siamlogo.png" className="logo-img" alt="SIAM Logo" />
         </a>
       </div>
 
