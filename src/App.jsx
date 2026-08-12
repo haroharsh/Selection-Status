@@ -174,12 +174,12 @@ export default function App() {
   };
 
   return (
-    <div className="relative min-h-screen w-screen flex flex-col overflow-hidden">
+    <div className="relative min-h-screen w-screen flex flex-col md:overflow-hidden overflow-y-auto">
       <img src="/rdr2_bg.png" className="bg-image" alt="RDR2 Background" />
 
       <div className="logo-container">
         <a href="https://siamjuit.vercel.app" target="_blank" rel="noopener noreferrer">
-          <img src="/siam_logo-removebg-preview.webp" className="logo-img" alt="SIAM Logo" />
+          <img src="/siamlogo.webp" className="logo-img" alt="SIAM Logo" />
         </a>
       </div>
 
@@ -187,11 +187,11 @@ export default function App() {
         href="https://github.com/haroharsh/Selection-Status" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className="fixed top-6 right-6 z-[100] opacity-85 hover:opacity-100 hover:scale-108 transition-all duration-300"
+        className="fixed top-4 right-4 md:top-6 md:right-6 z-[100] opacity-85 hover:opacity-100 hover:scale-108 transition-all duration-300"
       >
         <img 
-          src="/ghSym.webp" 
-          className="w-11 h-auto drop-shadow-[0_0_6px_rgba(0,0,0,0.9)] invert-[0.15] sepia-[0.8] hue-rotate-[-50deg] saturate-[3] brightness-[0.9]" 
+          src="/ghSym.webp"   
+          className="w-8 md:w-11 h-auto drop-shadow-[0_0_6px_rgba(0,0,0,0.9)] invert-[0.15] sepia-[0.8] hue-rotate-[-50deg] saturate-[3] brightness-[0.9]" 
           alt="GitHub" 
         />
       </a>

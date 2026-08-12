@@ -278,7 +278,8 @@ body::after {
 
 #captchaBox {
   margin: 15px auto 25px auto;
-  width: 302px;
+  width: 100%;
+  max-width: 302px;
   height: 92px;
   background-color: #ede6d0;
   border: 2px solid var(--color-rdr-red);
@@ -358,5 +359,124 @@ body::after {
 
 .home-btn:active {
   transform: translateY(1px);
+}
+
+/* ==========================================================================
+   Responsive Overrides for Mobile Viewports (< 768px)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto !important; /* Enable scrolling when virtual keyboard opens */
+    height: auto !important;
+    min-height: 100vh !important;
+  }
+
+  /* Adjust top header padding and make title heading font smaller */
+  .top-header {
+    padding: 95px 10px 15px 10px !important;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px !important;
+  }
+
+  .heading {
+    font-size: 2.1rem !important;
+    letter-spacing: 2px !important;
+    text-align: center;
+  }
+
+  .main-content {
+    height: auto !important;
+    min-height: calc(100vh - 190px) !important;
+    padding: 10px 10px 90px 10px !important; /* Space at bottom for absolute footer */
+    display: flex;
+    align-items: flex-start; /* Flow naturally instead of absolute centering */
+  }
+
+  /* Shrink SIAM logo for small viewports */
+  .logo-container {
+    top: 15px !important;
+    left: 15px !important;
+  }
+
+  .logo-img {
+    width: 70px !important;
+  }
+
+  /* Login HUD Card Adjustments */
+  .login {
+    width: 100% !important;
+    max-width: 390px !important;
+    padding: 28px 20px 24px 20px !important;
+    margin: 0 auto !important;
+  }
+
+  .login h2 {
+    font-size: 1.4rem !important;
+    letter-spacing: 1px !important;
+    padding-bottom: 8px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .catchLine {
+    font-size: 0.85rem !important;
+    margin-bottom: 20px !important;
+  }
+
+  .inputBox {
+    margin-bottom: 18px !important;
+  }
+
+  .inputBox input[type="text"] {
+    padding: 12px 15px !important;
+    font-size: 0.95rem !important;
+  }
+
+  #btn {
+    padding: 12px !important;
+    font-size: 1.1rem !important;
+  }
+
+  .btn-group {
+    gap: 10px !important;
+  }
+
+  .btn-group button {
+    padding: 10px !important;
+    font-size: 1rem !important;
+  }
+
+  .message {
+    padding: 10px !important;
+    font-size: 0.85rem !important;
+  }
+
+  .rdr-footer {
+    position: absolute !important; /* Avoid overlaying on top of input fields */
+    bottom: 20px !important;
+    right: 50% !important;
+    transform: translateX(50%) !important; /* Center at the bottom on mobile */
+    font-size: 0.72rem !important;
+    letter-spacing: 1px !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding: 0 10px !important;
+  }
+}
+
+/* Extra small viewport optimizations */
+@media (max-width: 360px) {
+  .heading {
+    font-size: 1.8rem !important;
+  }
+
+  .login {
+    padding: 20px 15px 18px 15px !important;
+  }
+
+  #captchaBox {
+    height: 80px !important;
+  }
 }
 
